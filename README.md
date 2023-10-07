@@ -1,7 +1,7 @@
 # Oort: a Python Meta-Framework for Web Applications
-Oort is a meta-framwork that builds on top of the highly successful Flask framework to creare a more robust and opinionated toolkit for developers who want to build extensible and maintainable web applications in Python with ease.
+Oort is a meta-framework that builds on top of the highly successful Flask framework to create a more robust, object-oriented toolkit for developers who want to build extensible and maintainable web applications in Python with ease.
 
-At it's core, Oort utilizes controller objects via the mature FlaskClassful library. Oort provides out-of-the-box scripting to autoload controller classes for FlaskClassful, allowing developers to launch new controller classes without the overhead of modifying core framework file.
+At its core, Oort utilizes controller objects via the mature FlaskClassful library. Oort provides out-of-the-box scripting to autoload controller classes for FlaskClassful, allowing developers to launch new controller classes without the overhead of modifying core framework files, such as app.py. Launching a new endpoint should be as simple as writing a class with the correct naming convention and saving it in the correct directory.
 
 ## Setup
 When running for the first time, you will need to install and execute the virtual environment. Exectute the following commands from this directory:
