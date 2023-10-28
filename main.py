@@ -15,3 +15,5 @@ def hello_world():
 for controller_class in controller_classes:    
     controller_class.register(app)
 
+if __name__ == '__main__':
+    app.run()
