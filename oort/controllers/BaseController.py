@@ -6,11 +6,6 @@ from flask import request
 from flask_classful import FlaskView
 from app.config import APP_ROUTE_PREFIX
 
-"""
-from peewee import DoesNotExist
-from framework.util.mysql import MySQLConnector
-from framework.util.net.ResponsePayload import ResponsePayload
-"""
 
 class BaseController (FlaskView, ABC):
     """A base view class that applies the most abstract configurations to the controller.
@@ -22,7 +17,7 @@ class BaseController (FlaskView, ABC):
 
 
         self.app = current_app
-        """ The same result as calling flask.current_app.
+        """ The same result as calling flask.current_app. Like flask.current_app, self.app can only be used in the context of a request.b
         
         For convinience only. """
 
