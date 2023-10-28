@@ -1,0 +1,1 @@
+"""End users should not modify the contents of this directory. `oort` provides framework libraries. `app` is the user-land directory. Python files specific to your application belong there."""
