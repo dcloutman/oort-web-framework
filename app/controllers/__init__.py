@@ -1,3 +1,8 @@
+"""
+*Warning:* This file belongs to the Oort meta-framework and should not be modified by
+ application developers. The contents of this file are subject to change with framework updates.
+"""
+
 from glob import glob
 from inspect import getmembers
 from os.path import basename, dirname, isfile, join
