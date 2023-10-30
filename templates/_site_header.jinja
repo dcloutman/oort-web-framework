@@ -1,0 +1,17 @@
+{% block site_header %}
+<header id="site_header">
+    <div id="masthead">
+        <div id="site_icon">
+            {% block site_header_icon %}{% endblock %}
+        </div>
+        <div id="masthead_extras">
+            {% block masthead_extras %}
+                <div id="tagline">
+                    <em>Object Oriented Flask</em>
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+    <nav></nav>
+</header>
+{% endblock %}

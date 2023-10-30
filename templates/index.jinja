@@ -1,0 +1,12 @@
+{% extends "__base.jinja" %}
+
+{# A simple page with a headline and some text. Add P tags or other formatting as desired. #}
+
+{% block main %}
+    <main>
+        <header>
+            <h1>{{ content_headline | e }}</h1>
+        </header>
+        {{ content_text | hsdoc }}
+    </main>
+{% endblock %}
