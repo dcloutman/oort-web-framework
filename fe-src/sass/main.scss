@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+}
+
+address,
+article,
+aside,
+blockquote,
+canvas,
+dd,
+div,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hr,
+li,
+main,
+nav,
+noscript,
+ol,
+p,
+pre,
+section,
+table,
+tfoot,
+ul,
+video {
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+body>header {
+    padding: 0 1em;
+    min-height: 15vh;
+}
+
+main {
+    padding: 0 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    min-height: 75vh;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+footer {
+    min-height: 10vh;
+    color: antiquewhite;
+    background-color: #333;
+    width: 100%;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "oort-css",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-build": "sass main.scss ../../static/css/main.css",
+    "sass-publish": "sass --style=compressed main.scss ../../static/css/main.min.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.68.0"
+  }
+}
