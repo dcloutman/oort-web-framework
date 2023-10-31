@@ -9,9 +9,6 @@ import logging
 from datetime import datetime
 from app.controllers import controller_classes
 
-# app = Flask(__name__)
-
-
 def add_filters():
     import oort.util.templating.filters
 
