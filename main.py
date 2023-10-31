@@ -18,7 +18,7 @@ def add_filters():
 
 def register_controllers():
     for controller_class in controller_classes:
-        controller_class.register(app)
+        controller_class.register(app, base_class = controller_class.get_base_class())
 
 
 add_filters()
