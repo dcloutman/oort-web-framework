@@ -7,7 +7,7 @@ from glob import glob
 from inspect import getmembers
 from os.path import basename, dirname, isfile, join
 from importlib import import_module
-from flask import current_app # Necessary for core functionality, such as self.app.logger
+from abc import ABC
 
 __all__ = ['controller_classes']
 
@@ -20,5 +20,9 @@ for controller_name in controller_names:
     for member_tuple in getmembers(controller_module):
         if member_tuple[0] == controller_name:
             controller_class = member_tuple[1]
-            controller_classes.append(controller_class)
+            if not issubclass(type(controller_class), ABC): # Don't register abstract classes.
+                controller_classes.append(controller_class)
+            else:
+                pass
+                # TODO: Add some logging or something. 
             break
