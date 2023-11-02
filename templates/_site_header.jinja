@@ -1,13 +1,15 @@
 {% block site_header %}
 <header id="site_header">
-    <div id="masthead">
-        <div id="site_icon">
-            {% block site_header_icon %}{% endblock %}
+    <div id="masthead" class="outer-border-box">
+        <div id="site_icon_container">
+            {% block site_header_icon %}
+                <img id="site_icon" src="{{url_for("static", filename="images/oort-logo-small.png")}}" />
+            {% endblock %}
         </div>
         <div id="masthead_extras">
             {% block masthead_extras %}
                 <div id="tagline">
-                    <em>Object Oriented Flask</em>
+                    <em>Oort: Object Oriented Flask</em>
                 </div>
             {% endblock %}
         </div>

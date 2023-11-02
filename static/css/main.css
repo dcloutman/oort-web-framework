@@ -1,41 +1,12 @@
 body {
   margin: 0;
+  font-size: 16px;
 }
 
-address,
-article,
-aside,
-blockquote,
-canvas,
-dd,
-div,
-dl,
-dt,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hr,
-li,
-main,
-nav,
-noscript,
-ol,
-p,
-pre,
-section,
-table,
-tfoot,
-ul,
-video {
+address, article, aside, blockquote, canvas, dd, div,
+dl, dt, fieldset, figcaption, figure, footer, form,
+h1, h2, h3, h4, h5, h6, header, hr, li, main, nav,
+noscript, ol, p, pre, section, table, tfoot, ul, video {
   overflow: auto;
   box-sizing: border-box;
 }
@@ -43,6 +14,13 @@ video {
 body > header {
   padding: 0 1em;
   min-height: 15vh;
+  background-color: #2E039A;
+  color: #E8FAFE;
+}
+
+#site_icon {
+  width: 128px;
+  height: 128px;
 }
 
 main {
@@ -50,6 +28,11 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   min-height: 75vh;
+}
+
+.outer-border-box {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .flex-container {
@@ -61,12 +44,10 @@ main {
 
 footer {
   min-height: 10vh;
-  color: antiquewhite;
-  background-color: #333;
+  color: #001318;
+  background-color: #01C7FE;
   width: 100%;
   padding: 1em;
-  position: fixed;
-  bottom: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
