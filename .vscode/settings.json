@@ -1,7 +1,8 @@
 {
     "python.analysis.extraPaths": [
-        "app",
-        "oort"
+        "./venv",
+        "./app",
+        "./oort"
     ],
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
