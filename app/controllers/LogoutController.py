@@ -8,5 +8,5 @@ class LogoutController(BaseController):
     def __init__(self) -> None:
         super().__init__()
 
-    def post(self):
+    def get(self):
         pass
