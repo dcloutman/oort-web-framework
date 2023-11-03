@@ -12,7 +12,7 @@ noscript, ol, p, pre, section, table, tfoot, ul, video {
 }
 
 body > header {
-  padding: 0 1em;
+  padding: 0;
   min-height: 15vh;
   background-color: #2E039A;
   color: #E8FAFE;
@@ -35,11 +35,15 @@ main {
   margin: 0 auto;
 }
 
-.flex-container {
+ul.horizontal-list {
+  list-style: none;
+  padding: 0;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+}
+
+body > header > nav {
+  color: #FBE8E9;
+  background-color: #E30005;
 }
 
 footer {
