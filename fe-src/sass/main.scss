@@ -1,8 +1,11 @@
 @use 'colors';
+@use 'fonts';
 
 body {
     margin: 0;
     font-size: 16px;
+    background: colors.$tertiary-container;
+    font-family: fonts.$main;
 }
 
 address, article, aside, blockquote, canvas, dd, div,
@@ -18,24 +21,72 @@ body>header {
     min-height: 15vh;
     background-color: colors.$primary;
     color: colors.$on-primary;
+    box-shadow: 0 .25em .5em 0 colors.$neutral-variant;
+    border-bottom: 1px solid colors.$neutral;
+}
+
+body>header>nav {
+    font-family: fonts.$expressive-primary;
 }
 
 #site_icon {
-    width: 128px;
-    height: 128px;
+    width: 10vh;
+    height: 10vh;
+}
+
+#masthead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: .9em;
+    font-family: fonts.$expressive-secondary;
 }
 
 main {
+    background-color: #fff;
     padding: 0 1em;
     max-width: 1200px;
     margin: 0 auto;
     min-height: 75vh;
 }
 
+main h1 {
+    font-family: fonts.$expressive-primary;
+}
+
 .outer-border-box {
     max-width: 1200px;
     margin: 0 auto
 }
+
+.left-nav-group {
+    float: left;
+}
+
+.left-nav-group>li {
+    padding: 0 1em;
+    border-left: 1px solid colors.$neutral-variant;
+}
+
+.left-nav-group>li:last-child {
+    border-left: none;
+    padding-left: 0;
+}
+
+.right-nav-group {
+    float: right;
+}
+
+.right-nav-group>li {
+    padding: 0 1em;
+    border-right: 1px solid colors.$neutral-variant;
+}
+
+.right-nav-group>li:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
 
 
 ul.horizontal-list {
@@ -54,9 +105,12 @@ body>header>nav {
 
 
 footer {
+    box-shadow: 0 -0.25em .5em 0 colors.$neutral-variant;
+    border-top: 1px solid colors.$neutral-variant;
     min-height: 10vh;
     color: colors.$on-tertiary;
     background-color: colors.$tertiary;
+    font-family: fonts.$expressive-secondary;
     width: 100%;
     padding: 1em;
 }

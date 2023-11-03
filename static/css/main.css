@@ -1,6 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 body {
   margin: 0;
   font-size: 16px;
+  background: #EBFAFE;
+  font-family: "Noto Sans", san-serif;
 }
 
 address, article, aside, blockquote, canvas, dd, div,
@@ -16,23 +21,70 @@ body > header {
   min-height: 15vh;
   background-color: #2E039A;
   color: #E8FAFE;
+  box-shadow: 0 0.25em 0.5em 0 #CFD2CF;
+  border-bottom: 1px solid #8D9294;
+}
+
+body > header > nav {
+  font-family: "Titillium Web", sans-serif;
 }
 
 #site_icon {
-  width: 128px;
-  height: 128px;
+  width: 10vh;
+  height: 10vh;
+}
+
+#masthead {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.9em;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 main {
+  background-color: #fff;
   padding: 0 1em;
   max-width: 1200px;
   margin: 0 auto;
   min-height: 75vh;
 }
 
+main h1 {
+  font-family: "Titillium Web", sans-serif;
+}
+
 .outer-border-box {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.left-nav-group {
+  float: left;
+}
+
+.left-nav-group > li {
+  padding: 0 1em;
+  border-left: 1px solid #CFD2CF;
+}
+
+.left-nav-group > li:last-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.right-nav-group {
+  float: right;
+}
+
+.right-nav-group > li {
+  padding: 0 1em;
+  border-right: 1px solid #CFD2CF;
+}
+
+.right-nav-group > li:last-child {
+  border-right: none;
+  padding-right: 0;
 }
 
 ul.horizontal-list {
@@ -47,9 +99,12 @@ body > header > nav {
 }
 
 footer {
+  box-shadow: 0 -0.25em 0.5em 0 #CFD2CF;
+  border-top: 1px solid #CFD2CF;
   min-height: 10vh;
   color: #001318;
   background-color: #01C7FE;
+  font-family: "Red Hat Display", sans-serif;
   width: 100%;
   padding: 1em;
 }
