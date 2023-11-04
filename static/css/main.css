@@ -6,6 +6,7 @@ body {
   font-size: 16px;
   background: #EBFAFE;
   font-family: "Noto Sans", san-serif;
+  background: linear-gradient(90deg, #EBFAFE 5%, #CFD2CF 45%, #CFD2CF 55%, #EBFAFE 95%);
 }
 
 address, article, aside, blockquote, canvas, dd, div,
@@ -99,6 +100,10 @@ body > header > nav {
 }
 
 footer {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
   box-shadow: 0 -0.25em 0.5em 0 #CFD2CF;
   border-top: 1px solid #CFD2CF;
   min-height: 10vh;
@@ -107,6 +112,13 @@ footer {
   font-family: "Red Hat Display", sans-serif;
   width: 100%;
   padding: 1em;
+}
+
+footer > .outer-border-box > nav {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */

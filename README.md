@@ -35,7 +35,11 @@ Controllers are at the core of Oort. They create application end-points and prov
 Controllers reside in the `controllers` directory. The module initiation (__init__.py) will automatically detect any file with a name matching the pattern `\*Controller.py` and then register them with the Flask application. No intervention from the developer is required to register a new controller with the Flask application.
 
 ## Version info:
-v0.0.0
+*v0.0.1*
+
+This version is alpha quality.
+
+Please note that v0.0.0 is not stable and subject to change. All releases earlier than 1.0.0 will likely introduce breaking changes, so be prepared for occasional paradigm shifts when using alpha or beta versions of this meta-framework.
 
 (c)2023 David Cloutman
 Licensed under the MIT license.

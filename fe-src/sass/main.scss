@@ -1,11 +1,14 @@
 @use 'colors';
 @use 'fonts';
+@use 'footer';
 
 body {
     margin: 0;
     font-size: 16px;
     background: colors.$tertiary-container;
     font-family: fonts.$main;
+
+    background: linear-gradient(90deg, colors.$tertiary-container 5%, colors.$neutral-variant 45%, colors.$neutral-variant 55%, colors.$tertiary-container 95%);
 }
 
 address, article, aside, blockquote, canvas, dd, div,
@@ -100,11 +103,12 @@ body>header>nav {
     background-color: colors.$secondary;
 }
 
-//ul.horizontal-list>li {}
-
-
-
 footer {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+
     box-shadow: 0 -0.25em .5em 0 colors.$neutral-variant;
     border-top: 1px solid colors.$neutral-variant;
     min-height: 10vh;
@@ -113,4 +117,12 @@ footer {
     font-family: fonts.$expressive-secondary;
     width: 100%;
     padding: 1em;
+}
+
+footer>.outer-border-box>nav {
+    flex-grow: footer.$num-columns;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
 }
