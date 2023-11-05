@@ -9,6 +9,8 @@ import logging
 from datetime import datetime
 from app.controllers import controller_classes
 from flask_login import LoginManager
+from oort.lib.auth import AuthUser # TODO Move this.
+
 
 def add_filters():
     import oort.util.templating.filters
@@ -17,13 +19,20 @@ def register_controllers():
     for controller_class in controller_classes:
         controller_class.register(app, base_class = controller_class.get_base_class())
 
-def register_login_manager():
-    login_manager = LoginManager()
-    login_manager.init_app(app)
+
+login_manager = LoginManager()
+login_manager.init_app(app)
+
+# TODO Move the following somewhere logical
+@login_manager.user_loader
+def load_user(user_id):
+    return AuthUser(user_id)
+
+# End TODO
 
 add_filters()
 register_controllers()
-register_login_manager()
+
 
 if __name__ == '__main__':
     app.run()

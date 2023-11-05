@@ -24,3 +24,5 @@ class AuthUser():
     def get_id(self):
         return self.user_id
     
+    
+    
