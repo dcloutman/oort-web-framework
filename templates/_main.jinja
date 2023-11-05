@@ -1,5 +1,7 @@
+{# This is where the main content for the page lives. Note that if you retain the default SCSS, you will 
+   likely want to use the outer-border-box class to retain the responsive layout. #}
 {% block main %}
     <main class="outer-border-box">
-        Define a main block.
+        {{ default_main_content | default("Define a main block.") | hidoc }}
     </main>
 {% endblock %}

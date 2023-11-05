@@ -1,0 +1,56 @@
+{% block footer %}
+    <footer>
+        <div class="outer-border-box">
+            <nav>
+                <section>
+                    <header>
+                        <h4>Column</h4>
+                    </header>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </section>
+                <section>
+                    <header>
+                        <header>
+                            <h4>Column</h4>
+                        </header>
+                    </header>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </section>
+                <section>
+                    <header>
+                        <h4>Column</h4>
+                    </header>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </section>
+                <section>
+                    <header>
+                        <header>
+                            <h4>Column</h4>
+                        </header>
+                    </header>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </section>
+            </nav>
+            <div id="copyright_container">
+                {# Do no insert user provided content into the copyright statement with the 'safe' filter in place. #}
+                &#169; {{ copyright_statement | safe }} 
+            </div>
+        </div>
+    </footer>
+{% endblock %}

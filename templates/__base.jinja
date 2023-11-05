@@ -4,7 +4,9 @@
         {% block commmon_head_tags %}
             {% include "_common_head_tags.jinja" %}
         {%  endblock %}
-        {% block additional_head_tags %}{% endblock %}
+        {% block extra_head_tags %}
+            {% include "_extra_head_tags.jinja" %}
+        {% endblock %}
     </head>
     <body>
 	{% block body %}
@@ -17,7 +19,7 @@
             {% endblock %}
 
             {% block footer %}
-                {% include "_footer.jinja" %}
+                {% include "_site_footer.jinja" %}
             {% endblock %}
         {% endblock %}
     </body>

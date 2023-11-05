@@ -5,10 +5,15 @@
 body {
     margin: 0;
     font-size: 16px;
-    background: colors.$tertiary-container;
     font-family: fonts.$main;
+    color: colors.$default-font-color;
 
+    background-color: colors.$tertiary-container;
     background: linear-gradient(90deg, colors.$tertiary-container 5%, colors.$neutral-variant 45%, colors.$neutral-variant 55%, colors.$tertiary-container 95%);
+}
+
+h1, h2, h3, h4, h5, h5 {
+    margin: 0;
 }
 
 address, article, aside, blockquote, canvas, dd, div,
@@ -20,6 +25,10 @@ noscript, ol, p, pre, section, table, tfoot, ul, video {
 }
 
 body>header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     padding: 0;
     min-height: 15vh;
     background-color: colors.$primary;
@@ -46,7 +55,7 @@ body>header>nav {
 }
 
 main {
-    background-color: #fff;
+    background-color: #ffffff2a;
     padding: 0 1em;
     max-width: 1200px;
     margin: 0 auto;
@@ -93,6 +102,7 @@ main h1 {
 
 
 ul.horizontal-list {
+    margin: 0.25em;
     list-style: none;
     padding: 0;
     display: flex;
@@ -104,11 +114,6 @@ body>header>nav {
 }
 
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-
     box-shadow: 0 -0.25em .5em 0 colors.$neutral-variant;
     border-top: 1px solid colors.$neutral-variant;
     min-height: 10vh;
@@ -120,9 +125,13 @@ footer {
 }
 
 footer>.outer-border-box>nav {
-    flex-grow: footer.$num-columns;
     display: flex;
     flex-direction: row;
-    justify-items: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#copyright_container {
+    text-align: center;
+    font-size: 0.8em;
 }
