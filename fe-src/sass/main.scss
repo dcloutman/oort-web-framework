@@ -2,6 +2,9 @@
 @use 'fonts';
 @use 'footer';
 
+// The next line can be removed when you're ready to develop your homepage.
+@use 'components/color-palette';
+
 body {
     margin: 0;
     font-size: 16px;
@@ -55,11 +58,27 @@ body>header>nav {
 }
 
 main {
-    background-color: #ffffff2a;
+    background-color: #ffffff66;
     padding: 0 1em;
     max-width: 1200px;
     margin: 0 auto;
     min-height: 75vh;
+}
+
+main section {
+    margin-bottom: 2em;
+}
+
+main section section {
+    margin-bottom: 1em;
+}
+
+main section section section {
+    margin-bottom: .5em;
+}
+
+p {
+    margin-bottom: 1em;
 }
 
 main h1 {

@@ -2,8 +2,14 @@ $default-font-color: #333;
 
 $primary: #2E039A;
 $on-primary: #E8FAFE;
+$primary-container: #12013D;
+$on-primary-container: #CFCCD8;
+
 $secondary: #E30005;
 $on-secondary: #FBE8E9;
+$secondary-container: #430001;
+$on-secondary-container: #ECE6E6;
+
 
 $tertiary: #01C7FE;
 $on-tertiary: #001318;
@@ -13,3 +19,65 @@ $on-tertiary-container: #171818;
 
 $neutral: #8D9294;
 $neutral-variant: #CFD2CF;
+
+
+@mixin primary-pair {
+    color: $on-primary;
+    background-color: $primary;
+}
+
+.color-primary-pair {
+    @include primary-pair ;
+}
+
+
+@mixin secondary-pair {
+    color: $on-secondary;
+    background-color: $secondary;
+}
+
+.color-secondary-pair {
+    @include secondary-pair ;
+}
+
+
+@mixin teriary-pair {
+    color: $on-tertiary;
+    background-color: $tertiary;
+}
+
+.color-teriary-pair {
+    @include teriary-pair ;
+}
+
+
+@mixin primary-container-pair {
+    color: $on-primary-container;
+    background-color: $primary-container;
+}
+
+.color-primary-container-pair {
+    @include primary-container-pair ;
+}
+
+
+@mixin secondary-container-pair {
+    color: $on-secondary-container;
+    background-color: $secondary-container;
+}
+
+.color-secondary-container-pair {
+    @include secondary-container-pair ;
+}
+
+
+@mixin tertiary-container-pair {
+    color: $on-tertiary-container;
+    background-color: $tertiary-container;
+}
+
+.color-tertiary-container-pair {
+    @include tertiary-container-pair ;
+}
+
+

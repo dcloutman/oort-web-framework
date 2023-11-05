@@ -1,6 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.color-primary-pair {
+  color: #E8FAFE;
+  background-color: #2E039A;
+}
+
+.color-secondary-pair {
+  color: #FBE8E9;
+  background-color: #E30005;
+}
+
+.color-teriary-pair {
+  color: #001318;
+  background-color: #01C7FE;
+}
+
+.color-primary-container-pair {
+  color: #CFCCD8;
+  background-color: #12013D;
+}
+
+.color-secondary-container-pair {
+  color: #ECE6E6;
+  background-color: #430001;
+}
+
+.color-tertiary-container-pair {
+  color: #171818;
+  background-color: #EBFAFE;
+}
+
+.color-palette .palette-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.color-palette .palette-container div {
+  border: 2px solid #8D9294;
+  width: 15em;
+  min-height: 10em;
+  padding: 0.5em;
+}
+
 body {
   margin: 0;
   font-size: 16px;
@@ -52,11 +95,27 @@ body > header > nav {
 }
 
 main {
-  background-color: rgba(255, 255, 255, 0.1647058824);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 0 1em;
   max-width: 1200px;
   margin: 0 auto;
   min-height: 75vh;
+}
+
+main section {
+  margin-bottom: 2em;
+}
+
+main section section {
+  margin-bottom: 1em;
+}
+
+main section section section {
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
 }
 
 main h1 {

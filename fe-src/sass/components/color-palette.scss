@@ -1,0 +1,18 @@
+@use '../colors';
+
+.color-palette {
+    .palette-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        div {
+            border: 2px solid colors.$neutral;
+            
+            width: 15em;
+            min-height: 10em;
+            padding: 0.5em;
+        }
+    }
+}

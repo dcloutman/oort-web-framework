@@ -7,6 +7,65 @@
         <header>
             <h1>{{ content_headline | e }}</h1>
         </header>
-        {{ content_text | hsdoc }}
+        <section>
+            {{ content_text | hsdoc }}
+        </section>
+
+        <section>
+            <header>
+                <h2>Color Palates</h2>
+            </header>
+            <p>Palate colors are set in the colors.scss file.</p>
+
+            <section class="color-palette">
+                <header>
+                    <h3>Main Colors</h3>
+                </header>
+
+                <div class="palette-container">
+                    <div class="color-primary-pair">
+                        <header>
+                            <h4>Primary &#9632;</h4>
+                        </header>
+                    </div>
+                    <div class="color-secondary-pair">
+                        <header>
+                            <h4>Secondary &#9632;</h4>
+                        </header>
+                    </div>
+                    <div class="color-tertiary-pair">
+                        <header>
+                            <h4>Tertiary &#9632;</h4>
+                        </header>
+                    </div>
+                </div>
+            </section>
+
+            <section class="color-palette">
+                <header>
+                    <h3>Container Colors</h3>
+                </header>
+
+                <div class="palette-container">
+                    <div class="color-primary-container-pair">
+                        <header>
+                            <h4>Primary Container &#9632;</h4>
+                        </header>
+                    </div>
+                    <div class="color-secondary-container-pair">
+                        <header>
+                            <h4>Secondary Container &#9632;</h4>
+                        </header>
+                    </div>
+                    <div class="color-tertiary-container-pair">
+                        <header>
+                            <h4>Tertiary &#9632;</h4>
+                        </header>
+                    </div>
+                </div>
+            </section>
+
+
+        </section>
     </main>
 {% endblock %}
