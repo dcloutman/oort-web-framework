@@ -92,6 +92,7 @@ body > header > nav {
   align-items: center;
   font-size: 0.9em;
   font-family: "Red Hat Display", sans-serif;
+  width: 100%;
 }
 
 main {
