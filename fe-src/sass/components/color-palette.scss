@@ -7,6 +7,9 @@
         justify-content: space-between;
         align-items: flex-start;
 
+        padding: 0.5em;
+        border: 1px dotted colors.$neutral-variant;
+
         div {
             border: 2px solid colors.$neutral;
             
