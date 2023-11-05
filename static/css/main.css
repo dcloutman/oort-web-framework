@@ -1,6 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.surface-container-lowest {
+  background-color: #ffffff;
+}
+
+.surface-container-low {
+  background-color: #fafafa;
+}
+
+.surface-container {
+  background-color: #F8F8F8;
+}
+
+.surface-container-high {
+  background-color: #F6F6F6;
+}
+
+.surface-container-highest {
+  background-color: #F3F4F4;
+}
+
+.surface-bright {
+  background-color: #FCFCFC;
+}
+
+.surface {
+  background-color: #F9F9F9;
+}
+
+.surface-dim {
+  background-color: #E3E4E4;
+}
+
 .color-primary-pair {
   color: #E8FAFE;
   background-color: #2E039A;
@@ -26,9 +58,24 @@
   background-color: #430001;
 }
 
+.color-tertiary-pair {
+  color: #001318;
+  background-color: #01C7FE;
+}
+
 .color-tertiary-container-pair {
   color: #171818;
   background-color: #EBFAFE;
+}
+
+.color-neutral-pair {
+  color: #333;
+  background-color: #8D9294;
+}
+
+.color-neutral-variant-pair {
+  color: #333;
+  background-color: #CFD2CF;
 }
 
 .color-palette .palette-container {

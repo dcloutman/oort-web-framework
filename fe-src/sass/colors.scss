@@ -16,9 +16,46 @@ $on-tertiary: #001318;
 $tertiary-container: #EBFAFE;
 $on-tertiary-container: #171818;
 
-
 $neutral: #8D9294;
 $neutral-variant: #CFD2CF;
+
+$surface-bright: #FCFCFC;
+$surface: #F9F9F9;
+$surface-dim: #E3E4E4;
+
+$surface-container-lowest: #ffffff;
+$surface-container-low: #fafafa;
+$surface-container: #F8F8F8;
+$surface-container-high: #F6F6F6;
+$surface-container-highest: #F3F4F4;
+
+.surface-container-lowest {
+    background-color: $surface-container-lowest;
+}
+.surface-container-low {
+    background-color: $surface-container-low;
+}
+.surface-container {
+    background-color: $surface-container;
+}
+.surface-container-high {
+    background-color: $surface-container-high;
+}
+.surface-container-highest {
+    background-color: $surface-container-highest;
+}
+
+.surface-bright {
+    background-color: $surface-bright;
+}    
+
+.surface {
+    background-color: $surface;
+}
+
+.surface-dim {
+    background-color: $surface-dim;
+}
 
 
 @mixin primary-pair {
@@ -57,7 +94,7 @@ $neutral-variant: #CFD2CF;
 }
 
 .color-primary-container-pair {
-    @include primary-container-pair ;
+    @include primary-container-pair;
 }
 
 
@@ -70,6 +107,15 @@ $neutral-variant: #CFD2CF;
     @include secondary-container-pair ;
 }
 
+@mixin tertiary-pair {
+    color: $on-tertiary;
+    background-color: $tertiary;
+}
+
+.color-tertiary-pair {
+    @include tertiary-pair ;
+}
+
 
 @mixin tertiary-container-pair {
     color: $on-tertiary-container;
@@ -80,4 +126,20 @@ $neutral-variant: #CFD2CF;
     @include tertiary-container-pair ;
 }
 
+@mixin neutral-pair {
+    color: $default-font-color;
+    background-color: $neutral;
+}
 
+.color-neutral-pair {
+    @include neutral-pair;
+}
+
+@mixin neutral-variant-pair {
+    color: $default-font-color;
+    background-color: $neutral-variant;
+}
+
+.color-neutral-variant-pair {
+    @include neutral-variant-pair;
+}
