@@ -29,21 +29,100 @@ $surface-container: #F8F8F8;
 $surface-container-high: #F6F6F6;
 $surface-container-highest: #F3F4F4;
 
+$error: #D41121;
+$on-error: #FAE7E9;
+$warning: #FFBA1A;
+$on-warning: #FFF8E8;
+$success: #58C322;
+$on-success: #EEF9E9;
+
+$error-container: #D41121;
+$on-error-container: #2A0306;
+$warning-container: #FFE3A3;
+$on-warning-container: #332505;
+$success-container: #BCE7A6;
+$on-success-container: #112706;
+
+
+@mixin error-pair {
+    background-color: $error;
+    color: $on-error;
+}
+
+@mixin warning-pair {
+    background-color: $warning;
+    color: $on-warning;
+}
+
+@mixin success-pair {
+    background-color: $success;
+    color: $on-success;
+}
+
+@mixin error-container-pair {
+    background-color: $error-container;
+    color: $on-error-container;
+}
+
+@mixin warning-container-pair {
+    background-color: $warning-container;
+    color: $on-warning-container;
+}
+
+@mixin success-container-pair {
+    background-color: $success-container;
+    color: $on-success-container;
+}
+
+
+.color-error-pair {
+    @include error-pair;
+}
+
+.color-warning-pair {
+    @include warning-pair;
+}
+
+.color-success-pair {
+    @include success-pair;
+}
+
+
+
+.color-error-container-pair {
+    @include error-container-pair;
+}
+
+.color-warning-container-pair {
+    @include warning-container-pair;
+}
+
+.color-success-container-pair {
+    @include success-container-pair;
+}
+
+
+
 .surface-container-lowest {
     background-color: $surface-container-lowest;
 }
+
 .surface-container-low {
     background-color: $surface-container-low;
 }
+
 .surface-container {
     background-color: $surface-container;
 }
+
 .surface-container-high {
     background-color: $surface-container-high;
 }
+
 .surface-container-highest {
     background-color: $surface-container-highest;
 }
+
 
 .surface-bright {
     background-color: $surface-bright;
