@@ -1,36 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-.color-error-pair {
-  background-color: #D41121;
-  color: #FAE7E9;
-}
-
-.color-warning-pair {
-  background-color: #FFBA1A;
-  color: #FFF8E8;
-}
-
-.color-success-pair {
-  background-color: #58C322;
-  color: #EEF9E9;
-}
-
-.color-error-container-pair {
-  background-color: #D41121;
-  color: #2A0306;
-}
-
-.color-warning-container-pair {
-  background-color: #FFE3A3;
-  color: #332505;
-}
-
-.color-success-container-pair {
-  background-color: #BCE7A6;
-  color: #112706;
-}
-
 .surface-container-lowest {
   background-color: #ffffff;
 }
@@ -106,6 +76,36 @@
 .color-neutral-variant-pair {
   color: #333;
   background-color: #CFD2CF;
+}
+
+.color-error-pair {
+  background-color: #D41121;
+  color: #FAE7E9;
+}
+
+.color-warning-pair {
+  background-color: #FFBA1A;
+  color: #FFF8E8;
+}
+
+.color-success-pair {
+  background-color: #58C322;
+  color: #EEF9E9;
+}
+
+.color-error-container-pair {
+  background-color: #D41121;
+  color: #2A0306;
+}
+
+.color-warning-container-pair {
+  background-color: #FFE3A3;
+  color: #332505;
+}
+
+.color-success-container-pair {
+  background-color: #BCE7A6;
+  color: #112706;
 }
 
 .color-palette .palette-container {

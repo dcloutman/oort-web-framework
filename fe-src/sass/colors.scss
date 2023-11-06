@@ -43,100 +43,6 @@ $on-warning-container: #332505;
 $success-container: #BCE7A6;
 $on-success-container: #112706;
 
-
-@mixin error-pair {
-    background-color: $error;
-    color: $on-error;
-}
-
-@mixin warning-pair {
-    background-color: $warning;
-    color: $on-warning;
-}
-
-@mixin success-pair {
-    background-color: $success;
-    color: $on-success;
-}
-
-@mixin error-container-pair {
-    background-color: $error-container;
-    color: $on-error-container;
-}
-
-@mixin warning-container-pair {
-    background-color: $warning-container;
-    color: $on-warning-container;
-}
-
-@mixin success-container-pair {
-    background-color: $success-container;
-    color: $on-success-container;
-}
-
-
-.color-error-pair {
-    @include error-pair;
-}
-
-.color-warning-pair {
-    @include warning-pair;
-}
-
-.color-success-pair {
-    @include success-pair;
-}
-
-
-
-.color-error-container-pair {
-    @include error-container-pair;
-}
-
-.color-warning-container-pair {
-    @include warning-container-pair;
-}
-
-.color-success-container-pair {
-    @include success-container-pair;
-}
-
-
-
-.surface-container-lowest {
-    background-color: $surface-container-lowest;
-}
-
-.surface-container-low {
-    background-color: $surface-container-low;
-}
-
-.surface-container {
-    background-color: $surface-container;
-}
-
-.surface-container-high {
-    background-color: $surface-container-high;
-}
-
-.surface-container-highest {
-    background-color: $surface-container-highest;
-}
-
-
-.surface-bright {
-    background-color: $surface-bright;
-}    
-
-.surface {
-    background-color: $surface;
-}
-
-.surface-dim {
-    background-color: $surface-dim;
-}
-
-
 @mixin primary-pair {
     color: $on-primary;
     background-color: $primary;
@@ -222,3 +128,94 @@ $on-success-container: #112706;
 .color-neutral-variant-pair {
     @include neutral-variant-pair;
 }
+
+
+.surface-container-lowest {
+    background-color: $surface-container-lowest;
+}
+
+.surface-container-low {
+    background-color: $surface-container-low;
+}
+
+.surface-container {
+    background-color: $surface-container;
+}
+
+.surface-container-high {
+    background-color: $surface-container-high;
+}
+
+.surface-container-highest {
+    background-color: $surface-container-highest;
+}
+
+
+.surface-bright {
+    background-color: $surface-bright;
+}    
+
+.surface {
+    background-color: $surface;
+}
+
+.surface-dim {
+    background-color: $surface-dim;
+}
+
+
+@mixin error-pair {
+    background-color: $error;
+    color: $on-error;
+}
+
+.color-error-pair {
+    @include error-pair;
+}
+
+@mixin warning-pair {
+    background-color: $warning;
+    color: $on-warning;
+}    
+
+.color-warning-pair {
+    @include warning-pair;
+}    
+
+@mixin success-pair {
+    background-color: $success;
+    color: $on-success;
+}            
+
+.color-success-pair {
+    @include success-pair;
+}
+
+@mixin error-container-pair {
+    background-color: $error-container;
+    color: $on-error-container;
+}            
+
+.color-error-container-pair {
+    @include error-container-pair;
+}
+
+@mixin warning-container-pair {
+    background-color: $warning-container;
+    color: $on-warning-container;
+}                
+
+.color-warning-container-pair {
+    @include warning-container-pair;
+}
+
+@mixin success-container-pair {
+    background-color: $success-container;
+    color: $on-success-container;
+}                    
+
+.color-success-container-pair {
+    @include success-container-pair;
+}
+
+
