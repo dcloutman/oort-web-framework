@@ -17,7 +17,8 @@
     <nav>
         <div class="outer-border-box">
             <ul class="horizontal-list left-nav-group">
-                <li>Home</li>
+                <li><a href="{{ url_for('IndexController:index') }}">Home</a></li>
+                <li><a href="{{ url_for('ColorsController:index') }}">Colors</a></li>
             </ul>
 
             <ul class="horizontal-list right-nav-group">
