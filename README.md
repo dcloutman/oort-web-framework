@@ -16,7 +16,7 @@ pip install -r requirements.txt
 You should only run the server in its virtual environment. The virtual environment is started from this directory with the command:
 
 ```bash
-virtualenv venv/bin/activate
+source venv/bin/activate
 ```
 
 This will amend your PATH environment variable to use the locally installed `python`, `pip`, and Python packages, rather than the globally installed versions.
@@ -41,6 +41,6 @@ This version is alpha quality.
 
 Please note that v0.0.0 is not stable and subject to change. All releases earlier than 1.0.0 will likely introduce breaking changes, so be prepared for occasional paradigm shifts when using alpha or beta versions of this meta-framework.
 
-(c)2023 David Cloutman
+(c)2025 David Cloutman
 Licensed under the MIT license.
 
