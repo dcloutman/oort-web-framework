@@ -37,5 +37,5 @@ Controllers reside in the `controllers` directory. The module initiation (__init
 ## Version info:
 v0.0.0
 
-(c)2023 David Cloutman
+(c)2025 David Cloutman
 Licensed under the MIT license.
