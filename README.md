@@ -37,7 +37,7 @@ If you set `MYSQL_EXPOSE_EXTERNAL_PORT=false`, MySQL will not be accessible from
 You should only run the server in its virtual environment. The virtual environment is started from this directory with the command:
 
 ```bash
-virtualenv venv/bin/activate
+source venv/bin/activate
 ```
 
 This will amend your PATH environment variable to use the locally installed `python`, `pip`, and Python packages, rather than the globally installed versions.
