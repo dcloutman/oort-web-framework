@@ -12,6 +12,27 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## Environment Variables
+
+Environment variables are key-value pairs used to configure application settings such as database credentials, API keys, or debug modes. For Oort, these variables are stored in a `.env` file located in the root directory of your project (the same directory as this `README.md`). The `.env` file is not included in the distribution or committed to the repository by default, ensuring that sensitive information remains confidential.
+
+To get started, copy the provided `env-example` file to `.env` and edit it to suit your environment:
+
+```bash
+cp env-example .env
+```
+
+You should create separate `.env` files for different environments (development, QA, testing, production, etc.), each with appropriate settings. Never commit production passwords or other secrets to your code repository. The `.env` file is used by Docker Compose and other tools to load configuration values at runtime, keeping sensitive or environment-specific information separate from your source code.
+
+### MySQL Docker Compose Configuration
+Oort's Docker Compose setup allows you to control MySQL port exposure and mapping with the following environment variables in your `.env` file:
+
+- `MYSQL_EXTERNAL_PORT`: The port on your host machine to expose MySQL (default: 3306).
+- `MYSQL_INTERNAL_PORT`: The port inside the container for MySQL (default: 3306).
+- `MYSQL_EXPOSE_EXTERNAL_PORT`: Set to `true` to expose MySQL externally, or `false` to disable external exposure (default: true).
+
+If you set `MYSQL_EXPOSE_EXTERNAL_PORT=false`, MySQL will not be accessible from outside the Docker network.
+
 ## Running the Development Server
 You should only run the server in its virtual environment. The virtual environment is started from this directory with the command:
 
@@ -41,6 +62,6 @@ This version is alpha quality.
 
 Please note that v0.0.0 is not stable and subject to change. All releases earlier than 1.0.0 will likely introduce breaking changes, so be prepared for occasional paradigm shifts when using alpha or beta versions of this meta-framework.
 
-(c)2023 David Cloutman
+(c)2025 David Cloutman
 Licensed under the MIT license.
 

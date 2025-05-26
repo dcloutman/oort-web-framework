@@ -1,0 +1,31 @@
+version: '3'
+services:
+  flask-app:
+    build:
+      context: ./www
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mysql
+    env_file:
+      - ../.env
+
+  mysql:
+    image: mysql:8.0
+    restart: always
+    # External port exposure is controlled by MYSQL_EXPOSE_EXTERNAL_PORT (true/false)
+    ports:
+      - "${MYSQL_EXPOSE_EXTERNAL_PORT:-true} == 'true' ? ${MYSQL_EXTERNAL_PORT:-3306}:${MYSQL_INTERNAL_PORT:-3306} : ''"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_APPLICATION_PASSWORD}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    env_file:
+      - ../.env
+
+volumes:
+  mysql_data:
+

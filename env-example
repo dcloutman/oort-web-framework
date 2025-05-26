@@ -1,0 +1,18 @@
+# MySQL Docker Compose Configuration
+
+# The root account is used for managing the MySQL server. The username for this account is 'root'.
+# MYSQL_ROOT_PASSWORD: The password for the MySQL root account (required)
+MYSQL_ROOT_PASSWORD=your_root_password
+# MYSQL_DATABASE: The name of the default database to create (optional)
+MYSQL_DATABASE=oortdb
+# MYSQL_USER: The username for a non-root user with access to the database (optional)
+MYSQL_USER=oortuser
+# MYSQL_APPLICATION_PASSWORD: The password for the non-root application user (optional)
+MYSQL_APPLICATION_PASSWORD=your_password
+
+# MYSQL_EXTERNAL_PORT: The port on the host machine to expose MySQL (default: 3306)
+MYSQL_EXTERNAL_PORT=3307
+# MYSQL_INTERNAL_PORT: The port inside the container for MySQL (default: 3306)
+MYSQL_INTERNAL_PORT=3306
+# MYSQL_EXPOSE_EXTERNAL_PORT: Set to 'true' to expose MySQL externally, 'false' to disable (default: true)
+MYSQL_EXPOSE_EXTERNAL_PORT=true
