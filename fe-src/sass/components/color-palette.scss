@@ -1,5 +1,9 @@
 @use '../colors';
 
+/**
+ * Provides layout for the color palette page, which demonstrates the color settings.
+ */
+
 .color-palette {
     .palette-container {
         display: flex;
