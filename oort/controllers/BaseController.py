@@ -4,13 +4,20 @@ from urllib import response
 from flask import current_app # Necessary for core functionality, such as self.app.logger
 from flask import request
 from flask_classful import FlaskView
-from app.config import APP_ROUTE_PREFIX
+from dotenv import load_dotenv
+from os import getenv
 
 
 class BaseController (FlaskView, ABC):
     """A base view class that applies the most abstract configurations to the controller.
 
-    `route_prefix` defaults to an empty string but should be configured for the requirements of the environment.
+    `route_base` defaults to None, but can be configured via the `OORT_APP_ROUTE_BASE` environment variable to create a prefix for the entire app.
+    """
+
+    route_base: str|None = getenv('OORT_APP_ROUTE_BASE', None)
+    """
+    Sets an application-wide URL prefix. Do not to override this within subclasses.
+    Use the `OORT_APP_ROUTE_BASE` environment variable to set this value instead.
     """
 
     @staticmethod
@@ -39,9 +46,6 @@ class BaseController (FlaskView, ABC):
         
         For convinience only. """
 
-        self.route_prefix = APP_ROUTE_PREFIX
-        """Set application-wide view configurations.
-        It is best not to override this with subclasses."""
 
 
 
