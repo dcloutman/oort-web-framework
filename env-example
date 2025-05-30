@@ -12,11 +12,15 @@ FLASK_RUN_PORT=5000
 ### Oort Specific ###
 #####################
 
+# OORT_APP_ROUTE_BASE: Change this if you want to run this application to appear as if it runs out of a subdirectory 
+# of your server. E.g. instead of haviging the routes "/foo" and "/bar", you can add a 
+# system-wide prefix that sets them to "/myapp/foo" and "/myapp/bar" by setting this to "/myapp".
 OORT_APP_ROUTE_BASE=''
-"""
-Change this if you want to run this application to appear as if it runs out of a subdirectory of your server. E.g. instead of haviging the routes "/foo" and "/bar", you can add a system-wide prefix that sets them to "/myapp/foo" and "/myapp/bar" by setting this to "/myapp".
-"""
 
+# OORT_CORS_ALLOWED_ORIGINS: This is a comma-separated list of allowed origins for CORS requests. If none are specified, 
+# there will be a strict single origin policy in place for the whole app. This is the most secure 
+# configuration, but is not suitable for all use cases. Use a comma separated, if there are specific domains that you want to allow. (E.g., 'https://example.com,https://another-example.com') Setting to '*' will allow all origins, which is the most insecure settings, but is suitable in limited use cases, such as open APIs. Consider using the more specific @cross_origin decorator if you want to enable cross origin requests on specific routes. 
+OORT_CORS_ALLOWED_ORIGINS=''
 
 ########################
 ### MySQL Connection ###

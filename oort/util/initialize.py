@@ -4,7 +4,10 @@ from flask_cors import CORS
 from os import path, environ, pardir
 
 flask_app = Flask(__name__, static_folder="../../static", template_folder="../../templates")
-#CORS(flask_app, resources={r"/*": {"origins": "*"}})
+allowed_origins_string = environ.get('OORT_CORS_ALLOWED_ORIGINS', '')
+if not allowed_origins_string == '':
+    allowed_origins: list[str] = allowed_origins_string.split(',')
+    CORS(flask_app, origins=allowed_origins)
 
 # Set the app path to the root of the application
 APP_PATH = path.abspath(path.join(path.join(path.dirname(__file__), '..'), '..'))
