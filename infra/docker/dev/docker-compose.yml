@@ -2,30 +2,30 @@ version: '3'
 services:
   flask-app:
     build:
-      context: ./www
+      context: ./www                # use dev-local www directory
+    volumes:
+      - ../../../webapp:/app        # project/webapp -> /app
     ports:
       - "5000:5000"
     depends_on:
       - mysql
     env_file:
-      - ../.env
+      - ../../../.env               # fixed: use project root .env
 
   mysql:
     image: mysql:8.0
     restart: always
-    # External port exposure is controlled by MYSQL_EXPOSE_EXTERNAL_PORT (true/false)
     ports:
-      - "${MYSQL_EXPOSE_EXTERNAL_PORT:-true} == 'true' ? ${MYSQL_EXTERNAL_PORT:-3306}:${MYSQL_INTERNAL_PORT:-3306} : ''"
+      - "${DOCKER_COMPOSE_MYSQL_EXTERNAL_PORT:-3306}:${DOCKER_COMPOSE_MYSQL_INTERNAL_PORT:-3306}"
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_APPLICATION_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${OORT_MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${OORT_MYSQL_DATABASE}
+      MYSQL_USER: ${OORT_MYSQL_USER}
+      MYSQL_PASSWORD: ${OORT_MYSQL_APPLICATION_PASSWORD}
     volumes:
-      - mysql_data:/var/lib/mysql
+      - oort_app_mysql_data:/var/lib/mysql
     env_file:
-      - ../.env
+      - ../../../.env               # fixed to match flask-app
 
 volumes:
-  mysql_data:
-
+  oort_app_mysql_data:

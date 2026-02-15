@@ -10,7 +10,7 @@ itsdangerous==2.2.0
 Jinja2==3.1.6
 MarkupSafe==3.0.2
 peewee==3.18.1
-pyrefly==0.16.3
+pyrefly==0.17.1
 python-dotenv==1.1.0
 six==1.17.0
 webencodings==0.5.1

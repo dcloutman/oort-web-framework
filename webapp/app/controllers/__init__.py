@@ -11,9 +11,10 @@ from abc import ABC
 
 __all__ = ['controller_classes']
 
+CONTROLLER_CLASSES = [] # This will be exported to the main.py file where the classes will be registered.
+
 modules = glob(join(dirname(__file__), "*Controller.py"))
 controller_names = [ basename(f)[:-3] for f in modules if isfile(f) and not f.endswith('__init__.py')]
-controller_classes = []
 for controller_name in controller_names:
     controller_module = import_module(__name__ + '.' + controller_name)
     controller_class = None
@@ -21,7 +22,7 @@ for controller_name in controller_names:
         if member_tuple[0] == controller_name:
             controller_class = member_tuple[1]
             if not issubclass(type(controller_class), ABC): # Don't register abstract classes.
-                controller_classes.append(controller_class)
+                CONTROLLER_CLASSES.append(controller_class)
             else:
                 pass
                 # TODO: Add some logging or something. 

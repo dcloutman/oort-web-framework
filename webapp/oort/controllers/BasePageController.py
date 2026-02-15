@@ -1,8 +1,9 @@
 from oort.controllers.BaseController import BaseController
+from typing import Any
 
 class BasePageController (BaseController):
     @staticmethod
-    def get_base_class():
+    def get_base_class() -> type[Any]:
         """
         This is a critical security feature. Every public method, by default, is converted by Flask Classful to a route,
         including inherited methods. In Oort, the results of get_base_class()) is passed to the Flask app
@@ -18,7 +19,14 @@ class BasePageController (BaseController):
         super().__init__()
 
 
-    def _get_page_meta (self, title="", description="", keywords=""):
+    def _get_page_meta (self, title, description="", keywords="") -> dict[str, str]:
+        """
+        Returns a dictionary with meta information for the page.
+        Args:
+            title (str): The title of the page. This parameter is mandatory and impacts SEO heavily.
+            description (str): A brief description of the page.
+            keywords (str): Comma-separated keywords relevant to the page.
+        """
         return {
             "title": title,
             "description": description,
